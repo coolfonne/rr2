@@ -125,7 +125,7 @@ void keyDown(unsigned char inkey, int px, int py)
 
 void keyUp(unsigned char inkey, int px, int py)
 {
-    
+    //printf("%c\n", inkey);
     inkey = toupper(inkey);
     
     if (inkey == 'D') strafe_right_down=0;
@@ -667,7 +667,7 @@ int main(int argc, char *argv[])
     
     glutKeyboardFunc (keyDown);
     glutKeyboardUpFunc (keyUp);
-    //glutMouseFunc(mouse);
+    glutMouseFunc(mouse);
     glutSpecialFunc(specialdown);
     glutSpecialUpFunc(specialup);
     glutDisplayFunc(display);

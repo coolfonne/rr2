@@ -228,6 +228,8 @@ void keyboardproc(void)
     
     theta+=double(dx)*.01;
     pitch+=double(dy)*.01;
+    if (pitch > degtorad(45)) pitch=degtorad(45);
+    if (pitch < degtorad(-45)) pitch = degtorad(-45);
     
 	if (rightkeydown) 
 	{                  
