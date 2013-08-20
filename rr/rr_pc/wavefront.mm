@@ -1,11 +1,3 @@
-//
-//  wavefront.cpp
-//  UFO Invasion
-//
-//  Created by administrator a on 3/16/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #include "wavefront.h"
 #import <Cocoa/Cocoa.h>
 #include "stdio.h"
@@ -14,18 +6,10 @@
 void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
 {
     char line[2048];
-    int spaces = 0;          
+    int spaces = 0;
     FILE *fp;
     
-    
-    
-    
-    
-    
-    Material mat;                       
-    //system("pwd");
-    
-    
+    Material mat;
     
     NSString* mypath = [NSString stringWithFormat:@"%@/%s",
                         [ [ NSBundle mainBundle ] resourcePath ],
@@ -42,49 +26,22 @@ void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
     
     
     
-    //    char mycharbuffer[400];
-    //    strcpy(mycharbuffer, [mypath UTF8String]);
-    //    
-    //
-    //    
-    //    strcat(mycharbuffer, filename);
-    //    
-    //      //  strcpy(mycharbuffer, [filePathName UTF8String]);
-    //    
-    //    
-    //    printf("filename2 %s\n", mycharbuffer);
-    //    
-    //    char hmm[500];
-    //    sprintf(hmm, "%splane.obj", [mypath UTF8String]);
-    
-    //        printf("hmm %s\n", hmm);
-    // printf(filename2.cstring());
-    
-    // read the materials    
+    // read the materials
     
     fp = fopen(fullMaterialPath, "rb");
     
-    //   fp = fopen(hmm, "rb");
-    //  fp = fopen(mycharbuffer, "rb");
-    // fp = fopen(mtlfilename, "r");
-    if (!fp) {
-        //MessageBox(NULL, "could not open material file", "error", MB_OK); 
-        return;}
+    if (!fp) {        return;}
     while (fgets(line, 2048, fp))
-    {          
+    {
         if (!strncmp(line, "newmtl ", 7)) sscanf(line+7, "%s", mat.name);
         
-        if (!strncmp(line, "Ka ", 3)) 
+        if (!strncmp(line, "Ka ", 3))
         {
             sscanf(line+4, "%f %f %f", &mat.r, &mat.g, &mat.b);
             materials.push_back(mat);
         }
-    }        	     
-    fclose(fp); 
-    
-    
-    //if (!materials.size()) {MessageBox(NULL, "could not find any materials in material file", "error", MB_OK); return;}
-    
+    }
+    fclose(fp);
     
     int curmat = 0;
     
@@ -102,13 +59,10 @@ void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
     
     fp = fopen(fullOBJPath, "r");
     
-    //  fp = fopen(filename, "r");
-    if (!fp) {
-        //MessageBox(NULL, "could not open file", "error", MB_OK);
-        return;}
+    if (!fp) {return;}
     
     while (fgets(line, 2048, fp))
-    {          
+    {
         
         // vertex
         if (!strncmp(line, "v ", 2)) {
@@ -127,14 +81,14 @@ void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
             if (v[1] < box.miny) box.miny = v[1];
             if (v[2] < box.minz) box.minz = v[2];
             
-            points.push_back(v);	    
+            points.push_back(v);
         }
         
         // normal
         if (!strncmp(line, "vn ", 2)) {
             Vector n;
             sscanf(line+2, "%f %f %f", &n[0], &n[1], &n[2]);
-            normals.push_back(n);	    
+            normals.push_back(n);
         }
         
         
@@ -147,14 +101,14 @@ void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
             
         }
         
-        // face	    
+        // face
         if (!strncmp(line, "f ", 2)) {
             Face f;
             
             // this is just to read the texture coord indices since we're not using them
             int junk;
             
-            if (strstr(line, "//"))   		   
+            if (strstr(line, "//"))
                 sscanf(line+2, "%d//%d %d//%d %d//%d", &f.v[0],  &f.n[0], &f.v[1], &f.n[1], &f.v[2], &f.n[2]);
             else	  sscanf(line+2, "%d/%d/%d %d/%d/%d %d/%d/%d", &f.v[0],  &junk, &f.n[0], &f.v[1],&junk, &f.n[1], &f.v[2], &junk, &f.n[2]);
             
@@ -165,18 +119,16 @@ void Wavefront::loadfile(char *filename, char *mtlfilename, float scale)
             
             f.n[0]--;
             f.n[1]--;
-            f.n[2]--;	  
+            f.n[2]--;
             f.mat = curmat;
-            faces.push_back(f);	    
-        }	    
+            faces.push_back(f);
+        }
         
-    }        	     
-    fclose(fp); 
+    }
+    fclose(fp);
     
     
 }
-
-//public:
 
 Wavefront::Wavefront(char *filename, char *mtlfilename, float scale)
 {
@@ -186,7 +138,7 @@ Wavefront::Wavefront(char *filename, char *mtlfilename, float scale)
 
 void Wavefront::draw(void)
 {
-    glEnable(GL_COLOR_MATERIAL);              
+    glEnable(GL_COLOR_MATERIAL);
     vector<Face>::iterator i = faces.begin();
     
     glBegin (GL_TRIANGLES);
@@ -204,9 +156,9 @@ void Wavefront::draw(void)
         glNormal3f (normals[f.n[2]][0], normals[f.n[2]][1], normals[f.n[2]][2]);
         glVertex3f (points[f.v[2]][0], points[f.v[2]][1], points[f.v[2]][2]);
         
-        i++;      	 
+        i++;
     }
     glEnd ();
-    glDisable(GL_COLOR_MATERIAL); 
+    glDisable(GL_COLOR_MATERIAL);
 }
 
