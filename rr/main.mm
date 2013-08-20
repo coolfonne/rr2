@@ -113,12 +113,13 @@ void keyDown(unsigned char inkey, int px, int py)
     
     if (inkey==27) gamestate = GAMEMENU;
     
-    if (toupper(inkey) == 'D') strafe_right_down=1;
-    if (inkey=='a' || inkey=='A') strafe_left_down=1;
-    if (inkey=='z' || inkey=='Z') fire_key_down=1;
+    inkey = toupper(inkey);
     
-    if (toupper(inkey) == 'W') up_arrow_down=1;
-    if (toupper(inkey) == 'S') down_arrow_down=1;
+    if (inkey == 'D') strafe_right_down=1;
+    if (inkey == 'A') strafe_left_down=1;
+    if (inkey == 'Z') fire_key_down=1;
+    if (inkey == 'W') up_arrow_down=1;
+    if (inkey == 'S') down_arrow_down=1;
 }
 
 
