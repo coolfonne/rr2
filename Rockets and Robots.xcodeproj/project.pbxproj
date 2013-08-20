@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA12B51B1672C7E0008929CC /* newrock2.gif */; };
+		BA2061D11597FED500FBADED /* robotz.icns in Resources */ = {isa = PBXBuildFile; fileRef = BA2061D01597FED500FBADED /* robotz.icns */; };
+		BA624B6F17C33E6E00EBE791 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190400E14D2638700EE91CE /* AppKit.framework */; };
+		BA92B85117C2F077008DFA72 /* TheMouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA92B84F17C2F077008DFA72 /* TheMouse.cpp */; };
+		E18FD6F914DB439E0072AE96 /* newrock.png in Resources */ = {isa = PBXBuildFile; fileRef = E18FD6F814DB439E0072AE96 /* newrock.png */; };
+		E190400C14D2638700EE91CE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190400B14D2638700EE91CE /* Cocoa.framework */; };
+		E190401614D2638700EE91CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E190401414D2638700EE91CE /* InfoPlist.strings */; };
+		E190401814D2638700EE91CE /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = E190401714D2638700EE91CE /* main.mm */; };
+		E190401C14D2638800EE91CE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E190401A14D2638800EE91CE /* Credits.rtf */; };
+		E190402214D2638800EE91CE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E190402014D2638800EE91CE /* MainMenu.xib */; };
+		E190405C14D263E800EE91CE /* diescream.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190402D14D263E800EE91CE /* diescream.wav */; };
+		E190405D14D263E800EE91CE /* enemyrocket2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190402E14D263E800EE91CE /* enemyrocket2.mtl */; };
+		E190405E14D263E800EE91CE /* enemyrocket2.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190402F14D263E800EE91CE /* enemyrocket2.obj */; };
+		E190405F14D263E800EE91CE /* explode1.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190403014D263E800EE91CE /* explode1.mtl */; };
+		E190406014D263E800EE91CE /* explode1.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190403114D263E800EE91CE /* explode1.obj */; };
+		E190406114D263E800EE91CE /* launcher2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190403414D263E800EE91CE /* launcher2.mtl */; };
+		E190406214D263E800EE91CE /* launcher2.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190403514D263E800EE91CE /* launcher2.obj */; };
+		E190406314D263E800EE91CE /* mazeprog.mm in Sources */ = {isa = PBXBuildFile; fileRef = E190403814D263E800EE91CE /* mazeprog.mm */; };
+		E190406814D263E800EE91CE /* myfont.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190403D14D263E800EE91CE /* myfont.mtl */; };
+		E190406914D263E800EE91CE /* myfont.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190403E14D263E800EE91CE /* myfont.obj */; };
+		E190406B14D263E800EE91CE /* rlaunch2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190404214D263E800EE91CE /* rlaunch2.wav */; };
+		E190406C14D263E800EE91CE /* robot6.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190404314D263E800EE91CE /* robot6.mtl */; };
+		E190406D14D263E800EE91CE /* robot6.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190404414D263E800EE91CE /* robot6.obj */; };
+		E190406E14D263E800EE91CE /* robotexplode2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190404514D263E800EE91CE /* robotexplode2.mtl */; };
+		E190406F14D263E800EE91CE /* robotexplode2.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190404614D263E800EE91CE /* robotexplode2.obj */; };
+		E190407014D263E800EE91CE /* robotexplosion2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190404714D263E800EE91CE /* robotexplosion2.wav */; };
+		E190407114D263E800EE91CE /* robotlaunch6.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190404814D263E800EE91CE /* robotlaunch6.wav */; };
+		E190407214D263E800EE91CE /* robotpink.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190404914D263E800EE91CE /* robotpink.mtl */; };
+		E190407314D263E800EE91CE /* robotpink.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190404A14D263E800EE91CE /* robotpink.obj */; };
+		E190407414D263E800EE91CE /* robotred.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190404B14D263E800EE91CE /* robotred.mtl */; };
+		E190407514D263E800EE91CE /* robotred.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190404C14D263E800EE91CE /* robotred.obj */; };
+		E190407614D263E800EE91CE /* robotrocketexplosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190404D14D263E800EE91CE /* robotrocketexplosion.wav */; };
+		E190407714D263E800EE91CE /* rockblur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E190404E14D263E800EE91CE /* rockblur.jpg */; };
+		E190407814D263E800EE91CE /* rocket2.mtl in Resources */ = {isa = PBXBuildFile; fileRef = E190404F14D263E800EE91CE /* rocket2.mtl */; };
+		E190407914D263E800EE91CE /* rocket2.obj in Resources */ = {isa = PBXBuildFile; fileRef = E190405014D263E800EE91CE /* rocket2.obj */; };
+		E190407A14D263E800EE91CE /* rocketexplosion3.wav in Resources */ = {isa = PBXBuildFile; fileRef = E190405114D263E800EE91CE /* rocketexplosion3.wav */; };
+		E190407B14D263E800EE91CE /* rr.ico in Resources */ = {isa = PBXBuildFile; fileRef = E190405214D263E800EE91CE /* rr.ico */; };
+		E190408214D264EF00EE91CE /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190408114D264EF00EE91CE /* OpenGL.framework */; };
+		E190408414D264FF00EE91CE /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190408314D264FF00EE91CE /* GLUT.framework */; };
+		E190CF9F14DAF5C000A4BD13 /* roadway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E190CF9E14DAF5C000A4BD13 /* roadway.jpg */; };
+		E192D6A014DA444B0012253E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E192D69F14DA444B0012253E /* AudioToolbox.framework */; };
+		E195EB7F14D6814500C25492 /* matrixlib.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E195EB7E14D6814500C25492 /* matrixlib.cpp */; };
+		E195EB8314D6824B00C25492 /* box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E195EB8214D6824B00C25492 /* box.cpp */; };
+		E197A7AC14D2F902001E661F /* wavefront.mm in Sources */ = {isa = PBXBuildFile; fileRef = E197A7AB14D2F902001E661F /* wavefront.mm */; };
+		E1CE79CE14DB4A7D002E515D /* rr.icns in Resources */ = {isa = PBXBuildFile; fileRef = E1CE79CD14DB4A7D002E515D /* rr.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA12B51B1672C7E0008929CC /* newrock2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newrock2.gif; sourceTree = "<group>"; };
+		BA2061D01597FED500FBADED /* robotz.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = robotz.icns; sourceTree = "<group>"; };
+		BA3A16BE15B30C9900C89385 /* Rockets and Robots.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Rockets and Robots.entitlements"; sourceTree = "<group>"; };
+		BA92B84F17C2F077008DFA72 /* TheMouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheMouse.cpp; sourceTree = "<group>"; };
+		BA92B85017C2F077008DFA72 /* TheMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMouse.h; sourceTree = "<group>"; };
+		E185707A14DA417E00E2CCB5 /* mikesound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mikesound.h; sourceTree = "<group>"; };
+		E18FD6F814DB439E0072AE96 /* newrock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newrock.png; sourceTree = "<group>"; };
+		E190400714D2638700EE91CE /* Rockets and Robots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rockets and Robots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E190400B14D2638700EE91CE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E190400E14D2638700EE91CE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		E190400F14D2638700EE91CE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		E190401014D2638700EE91CE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E190401314D2638700EE91CE /* Rockets and Robots-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Rockets and Robots-Info.plist"; sourceTree = "<group>"; };
+		E190401514D2638700EE91CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E190401714D2638700EE91CE /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		E190401914D2638800EE91CE /* Rockets and Robots-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rockets and Robots-Prefix.pch"; sourceTree = "<group>"; };
+		E190401B14D2638800EE91CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		E190402114D2638800EE91CE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E190402D14D263E800EE91CE /* diescream.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = diescream.wav; path = rr/rr_pc/diescream.wav; sourceTree = "<group>"; };
+		E190402E14D263E800EE91CE /* enemyrocket2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = enemyrocket2.mtl; path = rr/rr_pc/enemyrocket2.mtl; sourceTree = "<group>"; };
+		E190402F14D263E800EE91CE /* enemyrocket2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = enemyrocket2.obj; path = rr/rr_pc/enemyrocket2.obj; sourceTree = "<group>"; };
+		E190403014D263E800EE91CE /* explode1.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = explode1.mtl; path = rr/rr_pc/explode1.mtl; sourceTree = "<group>"; };
+		E190403114D263E800EE91CE /* explode1.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = explode1.obj; path = rr/rr_pc/explode1.obj; sourceTree = "<group>"; };
+		E190403214D263E800EE91CE /* fatalerror.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fatalerror.h; sourceTree = "<group>"; };
+		E190403314D263E800EE91CE /* kdtree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kdtree.h; sourceTree = "<group>"; };
+		E190403414D263E800EE91CE /* launcher2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = launcher2.mtl; path = rr/rr_pc/launcher2.mtl; sourceTree = "<group>"; };
+		E190403514D263E800EE91CE /* launcher2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = launcher2.obj; path = rr/rr_pc/launcher2.obj; sourceTree = "<group>"; };
+		E190403714D263E800EE91CE /* maze.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = maze.h; sourceTree = "<group>"; };
+		E190403814D263E800EE91CE /* mazeprog.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mazeprog.mm; sourceTree = "<group>"; };
+		E190403D14D263E800EE91CE /* myfont.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = myfont.mtl; path = rr/rr_pc/myfont.mtl; sourceTree = "<group>"; };
+		E190403E14D263E800EE91CE /* myfont.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = myfont.obj; path = rr/rr_pc/myfont.obj; sourceTree = "<group>"; };
+		E190403F14D263E800EE91CE /* newfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newfont.h; sourceTree = "<group>"; };
+		E190404114D263E800EE91CE /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		E190404214D263E800EE91CE /* rlaunch2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = rlaunch2.wav; path = rr/rr_pc/rlaunch2.wav; sourceTree = "<group>"; };
+		E190404314D263E800EE91CE /* robot6.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robot6.mtl; path = rr/rr_pc/robot6.mtl; sourceTree = "<group>"; };
+		E190404414D263E800EE91CE /* robot6.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robot6.obj; path = rr/rr_pc/robot6.obj; sourceTree = "<group>"; };
+		E190404514D263E800EE91CE /* robotexplode2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotexplode2.mtl; path = rr/rr_pc/robotexplode2.mtl; sourceTree = "<group>"; };
+		E190404614D263E800EE91CE /* robotexplode2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotexplode2.obj; path = rr/rr_pc/robotexplode2.obj; sourceTree = "<group>"; };
+		E190404714D263E800EE91CE /* robotexplosion2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = robotexplosion2.wav; path = rr/rr_pc/robotexplosion2.wav; sourceTree = "<group>"; };
+		E190404814D263E800EE91CE /* robotlaunch6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = robotlaunch6.wav; path = rr/rr_pc/robotlaunch6.wav; sourceTree = "<group>"; };
+		E190404914D263E800EE91CE /* robotpink.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotpink.mtl; path = rr/rr_pc/robotpink.mtl; sourceTree = "<group>"; };
+		E190404A14D263E800EE91CE /* robotpink.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotpink.obj; path = rr/rr_pc/robotpink.obj; sourceTree = "<group>"; };
+		E190404B14D263E800EE91CE /* robotred.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotred.mtl; path = rr/rr_pc/robotred.mtl; sourceTree = "<group>"; };
+		E190404C14D263E800EE91CE /* robotred.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robotred.obj; path = rr/rr_pc/robotred.obj; sourceTree = "<group>"; };
+		E190404D14D263E800EE91CE /* robotrocketexplosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = robotrocketexplosion.wav; path = rr/rr_pc/robotrocketexplosion.wav; sourceTree = "<group>"; };
+		E190404E14D263E800EE91CE /* rockblur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rockblur.jpg; path = rr/rr_pc/rockblur.jpg; sourceTree = "<group>"; };
+		E190404F14D263E800EE91CE /* rocket2.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rocket2.mtl; path = rr/rr_pc/rocket2.mtl; sourceTree = "<group>"; };
+		E190405014D263E800EE91CE /* rocket2.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = rocket2.obj; path = rr/rr_pc/rocket2.obj; sourceTree = "<group>"; };
+		E190405114D263E800EE91CE /* rocketexplosion3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = rocketexplosion3.wav; path = rr/rr_pc/rocketexplosion3.wav; sourceTree = "<group>"; };
+		E190405214D263E800EE91CE /* rr.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; name = rr.ico; path = rr/rr_pc/rr.ico; sourceTree = "<group>"; };
+		E190405314D263E800EE91CE /* segment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segment.h; sourceTree = "<group>"; };
+		E190408114D264EF00EE91CE /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E190408314D264FF00EE91CE /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		E190CF9E14DAF5C000A4BD13 /* roadway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roadway.jpg; sourceTree = "<group>"; };
+		E192D69F14DA444B0012253E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E195EB7E14D6814500C25492 /* matrixlib.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrixlib.cpp; sourceTree = "<group>"; };
+		E195EB8014D6815600C25492 /* matrixlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrixlib.h; sourceTree = "<group>"; };
+		E195EB8114D6824200C25492 /* box.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = box.h; sourceTree = "<group>"; };
+		E195EB8214D6824B00C25492 /* box.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = box.cpp; sourceTree = "<group>"; };
+		E197A7AA14D2F8F5001E661F /* wavefront.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wavefront.h; sourceTree = "<group>"; };
+		E197A7AB14D2F902001E661F /* wavefront.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = wavefront.mm; sourceTree = "<group>"; };
+		E1CE79CD14DB4A7D002E515D /* rr.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rr.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E190400414D2638700EE91CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA624B6F17C33E6E00EBE791 /* AppKit.framework in Frameworks */,
+				E192D6A014DA444B0012253E /* AudioToolbox.framework in Frameworks */,
+				E190408414D264FF00EE91CE /* GLUT.framework in Frameworks */,
+				E190408214D264EF00EE91CE /* OpenGL.framework in Frameworks */,
+				E190400C14D2638700EE91CE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E1903FFC14D2638700EE91CE = {
+			isa = PBXGroup;
+			children = (
+				BA3A16BE15B30C9900C89385 /* Rockets and Robots.entitlements */,
+				E19E27A414D9FCD2002B8B60 /* Resources */,
+				E190402A14D263E800EE91CE /* rr_pc */,
+				E190401114D2638700EE91CE /* rr */,
+				E190400A14D2638700EE91CE /* Frameworks */,
+				E190400814D2638700EE91CE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E190400814D2638700EE91CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E190400714D2638700EE91CE /* Rockets and Robots.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E190400A14D2638700EE91CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E192D69F14DA444B0012253E /* AudioToolbox.framework */,
+				E190408314D264FF00EE91CE /* GLUT.framework */,
+				E190408114D264EF00EE91CE /* OpenGL.framework */,
+				E190400B14D2638700EE91CE /* Cocoa.framework */,
+				E190400D14D2638700EE91CE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E190400D14D2638700EE91CE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E190400E14D2638700EE91CE /* AppKit.framework */,
+				E190400F14D2638700EE91CE /* CoreData.framework */,
+				E190401014D2638700EE91CE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		E190401114D2638700EE91CE /* rr */ = {
+			isa = PBXGroup;
+			children = (
+				E190402014D2638800EE91CE /* MainMenu.xib */,
+				E190401214D2638700EE91CE /* Supporting Files */,
+			);
+			path = rr;
+			sourceTree = "<group>";
+		};
+		E190401214D2638700EE91CE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E190401314D2638700EE91CE /* Rockets and Robots-Info.plist */,
+				E190401414D2638700EE91CE /* InfoPlist.strings */,
+				E190401714D2638700EE91CE /* main.mm */,
+				E185707A14DA417E00E2CCB5 /* mikesound.h */,
+				E190401914D2638800EE91CE /* Rockets and Robots-Prefix.pch */,
+				E190401A14D2638800EE91CE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E190402A14D263E800EE91CE /* rr_pc */ = {
+			isa = PBXGroup;
+			children = (
+				E195EB8114D6824200C25492 /* box.h */,
+				E195EB7E14D6814500C25492 /* matrixlib.cpp */,
+				E195EB8214D6824B00C25492 /* box.cpp */,
+				E195EB8014D6815600C25492 /* matrixlib.h */,
+				E190403214D263E800EE91CE /* fatalerror.h */,
+				E190403314D263E800EE91CE /* kdtree.h */,
+				E190403714D263E800EE91CE /* maze.h */,
+				E190403814D263E800EE91CE /* mazeprog.mm */,
+				E190403F14D263E800EE91CE /* newfont.h */,
+				E190404114D263E800EE91CE /* resource.h */,
+				E190405314D263E800EE91CE /* segment.h */,
+				E197A7AA14D2F8F5001E661F /* wavefront.h */,
+				E197A7AB14D2F902001E661F /* wavefront.mm */,
+				BA92B84F17C2F077008DFA72 /* TheMouse.cpp */,
+				BA92B85017C2F077008DFA72 /* TheMouse.h */,
+			);
+			name = rr_pc;
+			path = rr/rr_pc;
+			sourceTree = "<group>";
+		};
+		E19E27A414D9FCD2002B8B60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA12B51B1672C7E0008929CC /* newrock2.gif */,
+				BA2061D01597FED500FBADED /* robotz.icns */,
+				E1CE79CD14DB4A7D002E515D /* rr.icns */,
+				E18FD6F814DB439E0072AE96 /* newrock.png */,
+				E190CF9E14DAF5C000A4BD13 /* roadway.jpg */,
+				E190403E14D263E800EE91CE /* myfont.obj */,
+				E190405214D263E800EE91CE /* rr.ico */,
+				E190403014D263E800EE91CE /* explode1.mtl */,
+				E190402F14D263E800EE91CE /* enemyrocket2.obj */,
+				E190403114D263E800EE91CE /* explode1.obj */,
+				E190403414D263E800EE91CE /* launcher2.mtl */,
+				E190404214D263E800EE91CE /* rlaunch2.wav */,
+				E190404314D263E800EE91CE /* robot6.mtl */,
+				E190404414D263E800EE91CE /* robot6.obj */,
+				E190404514D263E800EE91CE /* robotexplode2.mtl */,
+				E190404614D263E800EE91CE /* robotexplode2.obj */,
+				E190402E14D263E800EE91CE /* enemyrocket2.mtl */,
+				E190403D14D263E800EE91CE /* myfont.mtl */,
+				E190404914D263E800EE91CE /* robotpink.mtl */,
+				E190404A14D263E800EE91CE /* robotpink.obj */,
+				E190404B14D263E800EE91CE /* robotred.mtl */,
+				E190403514D263E800EE91CE /* launcher2.obj */,
+				E190404C14D263E800EE91CE /* robotred.obj */,
+				E190404F14D263E800EE91CE /* rocket2.mtl */,
+				E190405014D263E800EE91CE /* rocket2.obj */,
+				E190404714D263E800EE91CE /* robotexplosion2.wav */,
+				E190404814D263E800EE91CE /* robotlaunch6.wav */,
+				E190404E14D263E800EE91CE /* rockblur.jpg */,
+				E190405114D263E800EE91CE /* rocketexplosion3.wav */,
+				E190404D14D263E800EE91CE /* robotrocketexplosion.wav */,
+				E190402D14D263E800EE91CE /* diescream.wav */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E190400614D2638700EE91CE /* Rockets and Robots */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E190402514D2638800EE91CE /* Build configuration list for PBXNativeTarget "Rockets and Robots" */;
+			buildPhases = (
+				E190400314D2638700EE91CE /* Sources */,
+				E190400414D2638700EE91CE /* Frameworks */,
+				E190400514D2638700EE91CE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rockets and Robots";
+			productName = rr;
+			productReference = E190400714D2638700EE91CE /* Rockets and Robots.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E1903FFE14D2638700EE91CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = coolfone;
+			};
+			buildConfigurationList = E190400114D2638700EE91CE /* Build configuration list for PBXProject "Rockets and Robots" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E1903FFC14D2638700EE91CE;
+			productRefGroup = E190400814D2638700EE91CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E190400614D2638700EE91CE /* Rockets and Robots */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E190400514D2638700EE91CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E190401614D2638700EE91CE /* InfoPlist.strings in Resources */,
+				E190401C14D2638800EE91CE /* Credits.rtf in Resources */,
+				E190402214D2638800EE91CE /* MainMenu.xib in Resources */,
+				E190405C14D263E800EE91CE /* diescream.wav in Resources */,
+				E190405D14D263E800EE91CE /* enemyrocket2.mtl in Resources */,
+				E190405E14D263E800EE91CE /* enemyrocket2.obj in Resources */,
+				E190405F14D263E800EE91CE /* explode1.mtl in Resources */,
+				E190406014D263E800EE91CE /* explode1.obj in Resources */,
+				E190406114D263E800EE91CE /* launcher2.mtl in Resources */,
+				E190406214D263E800EE91CE /* launcher2.obj in Resources */,
+				E190406814D263E800EE91CE /* myfont.mtl in Resources */,
+				E190406914D263E800EE91CE /* myfont.obj in Resources */,
+				E190406B14D263E800EE91CE /* rlaunch2.wav in Resources */,
+				E190406C14D263E800EE91CE /* robot6.mtl in Resources */,
+				E190406D14D263E800EE91CE /* robot6.obj in Resources */,
+				E190406E14D263E800EE91CE /* robotexplode2.mtl in Resources */,
+				E190406F14D263E800EE91CE /* robotexplode2.obj in Resources */,
+				E190407014D263E800EE91CE /* robotexplosion2.wav in Resources */,
+				E190407114D263E800EE91CE /* robotlaunch6.wav in Resources */,
+				E190407214D263E800EE91CE /* robotpink.mtl in Resources */,
+				E190407314D263E800EE91CE /* robotpink.obj in Resources */,
+				E190407414D263E800EE91CE /* robotred.mtl in Resources */,
+				E190407514D263E800EE91CE /* robotred.obj in Resources */,
+				E190407614D263E800EE91CE /* robotrocketexplosion.wav in Resources */,
+				E190407714D263E800EE91CE /* rockblur.jpg in Resources */,
+				E190407814D263E800EE91CE /* rocket2.mtl in Resources */,
+				E190407914D263E800EE91CE /* rocket2.obj in Resources */,
+				E190407A14D263E800EE91CE /* rocketexplosion3.wav in Resources */,
+				E190407B14D263E800EE91CE /* rr.ico in Resources */,
+				E190CF9F14DAF5C000A4BD13 /* roadway.jpg in Resources */,
+				E18FD6F914DB439E0072AE96 /* newrock.png in Resources */,
+				E1CE79CE14DB4A7D002E515D /* rr.icns in Resources */,
+				BA2061D11597FED500FBADED /* robotz.icns in Resources */,
+				BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E190400314D2638700EE91CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E190401814D2638700EE91CE /* main.mm in Sources */,
+				E190406314D263E800EE91CE /* mazeprog.mm in Sources */,
+				E197A7AC14D2F902001E661F /* wavefront.mm in Sources */,
+				E195EB7F14D6814500C25492 /* matrixlib.cpp in Sources */,
+				E195EB8314D6824B00C25492 /* box.cpp in Sources */,
+				BA92B85117C2F077008DFA72 /* TheMouse.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E190401414D2638700EE91CE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E190401514D2638700EE91CE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E190401A14D2638800EE91CE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E190401B14D2638800EE91CE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		E190402014D2638800EE91CE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E190402114D2638800EE91CE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E190402314D2638800EE91CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E190402414D2638800EE91CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E190402614D2638800EE91CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Rockets and Robots.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rr/Rockets and Robots-Prefix.pch";
+				INFOPLIST_FILE = "rr/Rockets and Robots-Info.plist";
+				PRODUCT_NAME = "Rockets and Robots";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E190402714D2638800EE91CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CODE_SIGN_ENTITLEMENTS = "Rockets and Robots.entitlements";
+				CODE_SIGN_IDENTITY = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "rr/Rockets and Robots-Prefix.pch";
+				INFOPLIST_FILE = "rr/Rockets and Robots-Info.plist";
+				PRODUCT_NAME = "Rockets and Robots";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E190400114D2638700EE91CE /* Build configuration list for PBXProject "Rockets and Robots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E190402314D2638800EE91CE /* Debug */,
+				E190402414D2638800EE91CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E190402514D2638800EE91CE /* Build configuration list for PBXNativeTarget "Rockets and Robots" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E190402614D2638800EE91CE /* Debug */,
+				E190402714D2638800EE91CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E1903FFE14D2638700EE91CE /* Project object */;
+}
