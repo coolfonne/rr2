@@ -1,11 +1,3 @@
-//
-//  matrixlib.cpp
-//  reversi2
-//
-//  Created by administrator a on 3/5/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #include "matrixlib.h"
 
 Matrix buildidentitymatrix(void)

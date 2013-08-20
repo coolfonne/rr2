@@ -87,7 +87,6 @@
 		E190403D14D263E800EE91CE /* myfont.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = myfont.mtl; path = rr/rr_pc/myfont.mtl; sourceTree = "<group>"; };
 		E190403E14D263E800EE91CE /* myfont.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = myfont.obj; path = rr/rr_pc/myfont.obj; sourceTree = "<group>"; };
 		E190403F14D263E800EE91CE /* newfont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newfont.h; sourceTree = "<group>"; };
-		E190404114D263E800EE91CE /* resource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
 		E190404214D263E800EE91CE /* rlaunch2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = rlaunch2.wav; path = rr/rr_pc/rlaunch2.wav; sourceTree = "<group>"; };
 		E190404314D263E800EE91CE /* robot6.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robot6.mtl; path = rr/rr_pc/robot6.mtl; sourceTree = "<group>"; };
 		E190404414D263E800EE91CE /* robot6.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = robot6.obj; path = rr/rr_pc/robot6.obj; sourceTree = "<group>"; };
@@ -211,7 +210,6 @@
 				E190403714D263E800EE91CE /* maze.h */,
 				E190403814D263E800EE91CE /* mazeprog.mm */,
 				E190403F14D263E800EE91CE /* newfont.h */,
-				E190404114D263E800EE91CE /* resource.h */,
 				E190405314D263E800EE91CE /* segment.h */,
 				E197A7AA14D2F8F5001E661F /* wavefront.h */,
 				E197A7AB14D2F902001E661F /* wavefront.mm */,

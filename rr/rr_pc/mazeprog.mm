@@ -16,9 +16,8 @@
 
 #include "TheMouse.h"
 
-//#include "dsutil.h"
 #define DIALOG_1 130
-//CSoundManager* g_pSoundManager = NULL;
+
 
 #define NUMSOUNDCHANNELS 5
 #define ROBOTROCKETDELAY 70
