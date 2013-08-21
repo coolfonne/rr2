@@ -1,11 +1,3 @@
-//
-//  box.cpp
-//  UFO Invasion
-//
-//  Created by administrator a on 3/16/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
-//
-
 #include "box.h"
 
 
