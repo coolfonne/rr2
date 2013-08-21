@@ -775,8 +775,7 @@ void drawgamescreen(void)
         if (p.seg.x0 == p.seg.x1) glColor3ub(22, 149, 195);
 		else glColor3ub(22, 149, 245);
         glColor3ub(255,255,255);
-        //float ny = p.seg.x0 - p.seg.x1;
-        //float nx = -(p.seg.y0 - p.seg.y1);
+
         float nx=1;
         float ny=0;
         
@@ -785,8 +784,6 @@ void drawgamescreen(void)
         float dy = p.seg.y0 - p.seg.y1;
         
         float length = sqrt(dx*dx + dy*dy);
-        
-        //printf("length: %f\n", length);
         
         length*=100.0f;
         length = 1.0;
