@@ -36,12 +36,12 @@ extern Maze *maze;
 
 extern Newfont *nf;
 
-extern MikeSound robotexplodesound;
-extern MikeSound explodesound;
-extern MikeSound screamsound;
-extern MikeSound rlaunchsound;
-extern MikeSound robotrocketexplodesound;
-extern MikeSound robotlaunchsound;
+extern MySound robotexplodesound;
+extern MySound explodesound;
+extern MySound screamsound;
+extern MySound rlaunchsound;
+extern MySound robotrocketexplodesound;
+extern MySound robotlaunchsound;
 
 
 GLenum texFormat[ 5 ];   // Format of texture (GL_RGB, GL_RGBA)

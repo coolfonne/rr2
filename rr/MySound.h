@@ -1,12 +1,25 @@
 #import <AudioToolbox/AudioToolbox.h>
 
-class MikeSound
+class MySound
 {
     SystemSoundID sound_id;
     
     
     
 public:
+    
+    
+    MySound(NSString* filename)
+    {
+        loadsound(filename);
+    }
+    
+    MySound()
+    {
+        
+        
+    }
+    
 	void loadsound(NSString* filename)
 	{
         
@@ -21,7 +34,7 @@ public:
         AudioServicesPlaySystemSound(sound_id);
 	}
     
-	void freememory(void)
+	~MySound()
 	{
         AudioServicesDisposeSystemSoundID(sound_id);
 	}

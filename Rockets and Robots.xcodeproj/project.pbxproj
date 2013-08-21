@@ -62,7 +62,7 @@
 		BA560A0C17C4086D00377EDA /* graymud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graymud.jpg; sourceTree = "<group>"; };
 		BA92B84F17C2F077008DFA72 /* TheMouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheMouse.cpp; sourceTree = "<group>"; };
 		BA92B85017C2F077008DFA72 /* TheMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMouse.h; sourceTree = "<group>"; };
-		E185707A14DA417E00E2CCB5 /* mikesound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mikesound.h; sourceTree = "<group>"; };
+		E185707A14DA417E00E2CCB5 /* MySound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySound.h; sourceTree = "<group>"; };
 		E18FD6F814DB439E0072AE96 /* newrock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newrock.png; sourceTree = "<group>"; };
 		E190400714D2638700EE91CE /* Rockets and Robots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rockets and Robots.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E190400B14D2638700EE91CE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -193,7 +193,7 @@
 				E190401314D2638700EE91CE /* Rockets and Robots-Info.plist */,
 				E190401414D2638700EE91CE /* InfoPlist.strings */,
 				E190401714D2638700EE91CE /* main.mm */,
-				E185707A14DA417E00E2CCB5 /* mikesound.h */,
+				E185707A14DA417E00E2CCB5 /* MySound.h */,
 				E190401914D2638800EE91CE /* Rockets and Robots-Prefix.pch */,
 				E190401A14D2638800EE91CE /* Credits.rtf */,
 			);

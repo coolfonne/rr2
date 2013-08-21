@@ -33,12 +33,12 @@ extern int fire_key_down;
 
 extern void light2(void);
 
-MikeSound robotexplodesound;
-MikeSound explodesound;
-MikeSound screamsound;
-MikeSound rlaunchsound;
-MikeSound robotrocketexplodesound;
-MikeSound robotlaunchsound;
+MySound robotexplodesound;
+MySound explodesound;
+MySound screamsound;
+MySound rlaunchsound;
+MySound robotrocketexplodesound;
+MySound robotlaunchsound;
 
 int sndctr = 0;
 
