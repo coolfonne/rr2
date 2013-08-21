@@ -248,6 +248,9 @@ public:
         
     }
     
+    
+    
+    
     vector<Segment> getsegments(void)
     {
         
