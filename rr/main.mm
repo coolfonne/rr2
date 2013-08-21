@@ -615,6 +615,9 @@ int main(int argc, char *argv[])
     
     
     
+    
+    
+    
     loadGLTextures();
     mytexture = texture[0];
     glEnable(GL_TEXTURE_2D);
