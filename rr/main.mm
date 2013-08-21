@@ -256,19 +256,14 @@ void display(void)
     while (physicsactual < physicsgoal) {physicsloop(); 
         physicsactual++;}
     //    
-    //light7();
+
     
     glLoadIdentity();
     
     newlight7();
-    //    
-    //    stuff();
+
     glEnable(GL_TEXTURE_2D);
-    //drawgamescreen();
-    
-    
-    
-    /////
+
     
     if (gamestate == GAMEMENU) {drawgamemenu(); 
         //Sleep(20);
@@ -291,9 +286,6 @@ void display(void)
         drawyouwin();
     }
     
-    //SwapBuffers (hDC);
-    
-    
     if (gamestate == ACTION)
     {
         // take care of the physics
@@ -304,15 +296,7 @@ void display(void)
         if (NUMROBOTS - robotskilled == 0) gamestate = YOUWIN;
     }
     
-    
-    
-    
-    
-    //////
-    
-    
-    
-    
+
     glShadeModel( GL_SMOOTH );    
     glutSwapBuffers();
 }
