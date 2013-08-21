@@ -390,10 +390,6 @@ void loadGLTextures()
     
     
     
-    
-
-    
-    
   /*  loadBitmap( [NSString stringWithFormat:@"%@/%s",
                  [ [ NSBundle mainBundle ] resourcePath ],
                  "roadway.jpg" ],
