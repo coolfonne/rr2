@@ -4,8 +4,6 @@ class MySound
 {
     SystemSoundID sound_id;
     
-    
-    
 public:
     
     
@@ -16,8 +14,6 @@ public:
     
     MySound()
     {
-        
-        
     }
     
 	void loadsound(NSString* filename)
