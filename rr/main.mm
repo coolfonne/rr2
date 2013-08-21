@@ -3,7 +3,7 @@
 #include "kdtree.h"
 #include "maze.h"
 #include "newfont.h"
-#include "mikesound.h"
+#include "MySound.h"
 #include "TheMouse.h"
 
 #define NUMROBOTS 30

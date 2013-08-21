@@ -8,7 +8,7 @@
 #include "wavefront.h"
 #include "newfont.h"
 
-#include "mikesound.h"
+#include "MySound.h"
 
 #import <Cocoa/Cocoa.h>
 
