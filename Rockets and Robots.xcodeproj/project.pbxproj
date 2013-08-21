@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA12B51B1672C7E0008929CC /* newrock2.gif */; };
 		BA2061D11597FED500FBADED /* robotz.icns in Resources */ = {isa = PBXBuildFile; fileRef = BA2061D01597FED500FBADED /* robotz.icns */; };
+		BA560A0D17C4086D00377EDA /* graymud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA560A0C17C4086D00377EDA /* graymud.jpg */; };
 		BA624B6F17C33E6E00EBE791 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190400E14D2638700EE91CE /* AppKit.framework */; };
 		BA92B85117C2F077008DFA72 /* TheMouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA92B84F17C2F077008DFA72 /* TheMouse.cpp */; };
 		E18FD6F914DB439E0072AE96 /* newrock.png in Resources */ = {isa = PBXBuildFile; fileRef = E18FD6F814DB439E0072AE96 /* newrock.png */; };
@@ -58,6 +59,7 @@
 		BA12B51B1672C7E0008929CC /* newrock2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newrock2.gif; sourceTree = "<group>"; };
 		BA2061D01597FED500FBADED /* robotz.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = robotz.icns; sourceTree = "<group>"; };
 		BA3A16BE15B30C9900C89385 /* Rockets and Robots.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Rockets and Robots.entitlements"; sourceTree = "<group>"; };
+		BA560A0C17C4086D00377EDA /* graymud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graymud.jpg; sourceTree = "<group>"; };
 		BA92B84F17C2F077008DFA72 /* TheMouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheMouse.cpp; sourceTree = "<group>"; };
 		BA92B85017C2F077008DFA72 /* TheMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMouse.h; sourceTree = "<group>"; };
 		E185707A14DA417E00E2CCB5 /* mikesound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mikesound.h; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		E19E27A414D9FCD2002B8B60 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BA560A0C17C4086D00377EDA /* graymud.jpg */,
 				BA12B51B1672C7E0008929CC /* newrock2.gif */,
 				BA2061D01597FED500FBADED /* robotz.icns */,
 				E1CE79CD14DB4A7D002E515D /* rr.icns */,
@@ -343,6 +346,7 @@
 				E1CE79CE14DB4A7D002E515D /* rr.icns in Resources */,
 				BA2061D11597FED500FBADED /* robotz.icns in Resources */,
 				BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */,
+				BA560A0D17C4086D00377EDA /* graymud.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

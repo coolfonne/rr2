@@ -93,12 +93,12 @@ void bricklight(void)
     GLfloat LightGlobal[]= { .105, .205, .205, 1.0f };
     
     GLfloat LightPosition[]= { 0.0f,0.0f, 1.0f, 0.0f };
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);	
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);	
+    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
     glEnable(GL_LIGHT1);
     
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal); 
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal);
     
 }
 
@@ -194,8 +194,8 @@ bool islineclear(float x1, float y1, float x2, float y2)
 	{
 		float testx = x1*t + x2*(1.0-t);
 		float testy = y1*t + y2*(1.0-t);
-		if (maze->isblockwall(testx, testy)) return false;    
-	}	
+		if (maze->isblockwall(testx, testy)) return false;
+	}
     
 	return true;
 }
@@ -209,8 +209,8 @@ bool iscircleclear(float x, float y, float r = 0.004)
 	{
 		float circlex = x+cos(angle)*r;
 		float circley = y+sin(angle)*r;
-		if (maze->isblockwall(circlex, circley)) return false;    
-	} 
+		if (maze->isblockwall(circlex, circley)) return false;
+	}
 	return true;
 }
 
@@ -224,41 +224,41 @@ void keyboardproc(void)
     mouse->getstate(&dx, &dy);
     
     
-
+    
     
     theta+=double(dx)*.01;
     pitch+=double(dy)*.01;
     if (pitch > degtorad(45)) pitch=degtorad(45);
     if (pitch < degtorad(-45)) pitch = degtorad(-45);
     
-	if (rightkeydown) 
-	{                  
+	if (rightkeydown)
+	{
         theta+=.02;
         //		if (iscircleclear(x, y-cos(theta+M_PI/2.0)*speed)) y-=cos(theta+M_PI/2.0)*speed;
-        //		if (iscircleclear(x+sin(theta+M_PI/2.0)*speed, y)) x+=sin(theta+M_PI/2.0)*speed;                       
-	}   
+        //		if (iscircleclear(x+sin(theta+M_PI/2.0)*speed, y)) x+=sin(theta+M_PI/2.0)*speed;
+	}
     
-	if (leftkeydown) 
-	{           
+	if (leftkeydown)
+	{
         theta-=.02;
         //		if (iscircleclear(x, y-cos(theta-M_PI/2.0)*speed)) y-=cos(theta-M_PI/2.0)*speed;
-        //		if (iscircleclear(x+sin(theta-M_PI/2.0)*speed, y)) x+=sin(theta-M_PI/2.0)*speed;                       
-	}   
+        //		if (iscircleclear(x+sin(theta-M_PI/2.0)*speed, y)) x+=sin(theta-M_PI/2.0)*speed;
+	}
     
     
-   	if (strafe_right_down) 
-	{                  
+   	if (strafe_right_down)
+	{
         
         if (iscircleclear(x, y-cos(theta+M_PI/2.0)*speed)) y-=cos(theta+M_PI/2.0)*speed;
-        if (iscircleclear(x+sin(theta+M_PI/2.0)*speed, y)) x+=sin(theta+M_PI/2.0)*speed;                       
-	}   
+        if (iscircleclear(x+sin(theta+M_PI/2.0)*speed, y)) x+=sin(theta+M_PI/2.0)*speed;
+	}
     
-	if (strafe_left_down) 
-	{           
+	if (strafe_left_down)
+	{
         
         if (iscircleclear(x, y-cos(theta-M_PI/2.0)*speed)) y-=cos(theta-M_PI/2.0)*speed;
-        if (iscircleclear(x+sin(theta-M_PI/2.0)*speed, y)) x+=sin(theta-M_PI/2.0)*speed;                       
-	}    
+        if (iscircleclear(x+sin(theta-M_PI/2.0)*speed, y)) x+=sin(theta-M_PI/2.0)*speed;
+	}
     
     
     
@@ -273,16 +273,16 @@ void keyboardproc(void)
     
     
     
-	if (up_arrow_down) 
-	{                        
+	if (up_arrow_down)
+	{
 		if (iscircleclear(x, y-cos(theta)*speed)) y-=cos(theta)*speed;
-		if (iscircleclear(x+sin(theta)*speed, y)) x+=sin(theta)*speed;                       
-	}    
+		if (iscircleclear(x+sin(theta)*speed, y)) x+=sin(theta)*speed;
+	}
     
 	if (down_arrow_down)
 	{
 		if (iscircleclear(x, y+cos(theta)*speed)) y+=cos(theta)*speed;
-		if (iscircleclear(x-sin(theta)*speed, y)) x-=sin(theta)*speed;                                
+		if (iscircleclear(x-sin(theta)*speed, y)) x-=sin(theta)*speed;
 	}
     
     
@@ -294,19 +294,19 @@ void keyboardproc(void)
         
 		// move it over to the right a little
 		//float x2=x+sin(theta+M_PI/2.0)*.0008;
-		//float y2=y-cos(theta+M_PI/2.0)*.0008;			
+		//float y2=y-cos(theta+M_PI/2.0)*.0008;
         
-		Matrix matyaw = buildrotationmatrix(-theta, 0, 1, 0);			
+		Matrix matyaw = buildrotationmatrix(-theta, 0, 1, 0);
 		Matrix matpitch = buildrotationmatrix(-pitch, 1, 0, 0);
         
 		Vector startpt = matyaw*matpitch*buildvector(.0008, -.0008, 0);
         
         
 		Rocket rocket;
-		rocket.x = startpt[0] + x; 
+		rocket.x = startpt[0] + x;
 		rocket.y = 0.65;
         //rocket.y = 0.35;
-		rocket.z = startpt[2] + y; 
+		rocket.z = startpt[2] + y;
 		rocket.yaw = theta;
 		rocket.pitch = pitch;
         
@@ -336,16 +336,16 @@ void keyboardproc(void)
 
 //
 //
-//	if (GetAsyncKeyState(VK_UP)) 
-//	{                        
+//	if (GetAsyncKeyState(VK_UP))
+//	{
 //		if (iscircleclear(x, y-cos(theta)*speed)) y-=cos(theta)*speed;
-//		if (iscircleclear(x+sin(theta)*speed, y)) x+=sin(theta)*speed;                       
-//	}    
+//		if (iscircleclear(x+sin(theta)*speed, y)) x+=sin(theta)*speed;
+//	}
 //
 //	if (GetAsyncKeyState(VK_DOWN))
 //	{
 //		if (iscircleclear(x, y+cos(theta)*speed)) y+=cos(theta)*speed;
-//		if (iscircleclear(x-sin(theta)*speed, y)) x-=sin(theta)*speed;                                
+//		if (iscircleclear(x-sin(theta)*speed, y)) x-=sin(theta)*speed;
 //	}
 //
 //	if (GetAsyncKeyState(VK_PRIOR)) pitch-=.01;
@@ -367,16 +367,16 @@ void keyboardproc(void)
 //
 //}
 
-//void CALLBACK cbFunct(UINT , UINT , DWORD_PTR , DWORD_PTR , DWORD_PTR) 
-//{ 
-//	if (gamestate == ACTION) physicsgoal++; 
+//void CALLBACK cbFunct(UINT , UINT , DWORD_PTR , DWORD_PTR , DWORD_PTR)
+//{
+//	if (gamestate == ACTION) physicsgoal++;
 //	else if (gamestate == GAMEMENU) menuselrotatetime+=.03;
 //}
 
 void physicsloop(void)
 {
     
-	keyboardproc();   
+	keyboardproc();
     
 	// count down till we can fire again
 	if (rocketwait > 0) rocketwait--;
@@ -407,7 +407,7 @@ void physicsloop(void)
 			rocket.yaw = robot.curangle + M_PI/2.0;
 			rocket.pitch = 0;
             
-			Matrix matyaw = buildrotationmatrix(-rocket.yaw, 0, 1, 0);			
+			Matrix matyaw = buildrotationmatrix(-rocket.yaw, 0, 1, 0);
 			Matrix matpitch = buildrotationmatrix(rocket.pitch, 1, 0, 0);
 			Vector dir = matyaw*matpitch*buildvector(0, 0, -ROCKETSPEED*0.5);
             
@@ -437,7 +437,7 @@ void physicsloop(void)
         if (iscircleclear(robot2.x+robot2.vx, robot2.z+robot2.vz))
         {
             robot2.x+=robot2.vx;
-            robot2.y+=robot2.vy; 
+            robot2.y+=robot2.vy;
             robot2.z+=robot2.vz;
         }
         else {
@@ -468,7 +468,7 @@ void physicsloop(void)
         else
         {
             //if (rocket.playerrocket)
-            rocket.dy+=.0004;  
+            rocket.dy+=.0004;
             
         }
         
@@ -482,8 +482,8 @@ void physicsloop(void)
     // count down explosions and remove finished ones
     for (int ctr = 0; ctr < explosions.size(); ctr++)
     {
-        Explosion &e = explosions[ctr];	 
-        e.timeleft--;	
+        Explosion &e = explosions[ctr];
+        e.timeleft--;
         if (!e.timeleft) {explosions.erase(explosions.begin()+ctr); ctr--;}
     }
     
@@ -500,7 +500,7 @@ void physicsloop(void)
             health-=20;
             if (health < 0) health = 0;
             // remove the rocket
-            rockets.erase(rockets.begin()+rocketctr);  
+            rockets.erase(rockets.begin()+rocketctr);
             rocketctr--;
             screamsound.play();
             continue;
@@ -522,7 +522,7 @@ void physicsloop(void)
             if (rocket.playerrocket) explodesound.play();
             else robotrocketexplodesound.play();
             // remove the rocket
-            rockets.erase(rockets.begin()+rocketctr);  
+            rockets.erase(rockets.begin()+rocketctr);
             rocketctr--;
             
         }
@@ -553,7 +553,7 @@ void physicsloop(void)
                 explosions.push_back(explosion);
                 
                 // remove the rocket
-                rockets.erase(rockets.begin()+rocketctr);  
+                rockets.erase(rockets.begin()+rocketctr);
                 rocketctr--;
                 robot.y=.13;
                 robot.alive = false;
@@ -568,7 +568,7 @@ void physicsloop(void)
         }
     }
     
-} 
+}
 
 
 
@@ -576,7 +576,7 @@ void centertext(char *str)
 {
 	glPushMatrix();
 	float fontwid = nf->getwidth(str, .05);
-	glTranslatef(-fontwid/2.0, 0, 0);            
+	glTranslatef(-fontwid/2.0, 0, 0);
 	nf->drawstring(str, .05);
 	glPopMatrix();
 }
@@ -585,27 +585,27 @@ void centertext(char *str)
 void drawhealth(void)
 {
 	glDisable(GL_LIGHTING);
-	glDisable(GL_DEPTH_TEST);            
+	glDisable(GL_DEPTH_TEST);
 	glPushMatrix ();
-	glTranslatef(-6, 4.25, -8);            
+	glTranslatef(-6, 4.25, -8);
 	glColor3f(1, 1, 1);
 	char str[80];
 	sprintf(str, "Health: %d            Robots left: %d", health, NUMROBOTS - robotskilled);
 	nf->drawstring(str, .02);
 	glPopMatrix ();
 	glEnable(GL_LIGHTING);
-	glEnable(GL_DEPTH_TEST);                 
+	glEnable(GL_DEPTH_TEST);
 }
 
 void reseteverything(void)
 {
-	health=100;              
+	health=100;
 	physicsactual=0;
 	physicsgoal=0;
 	robots.clear();
 	explosions.clear();
 	rockets.clear();
-	gamestate = GAMEMENU;  
+	gamestate = GAMEMENU;
 	robotskilled=0;
 	theta=-1.57;
 	pitch = 0;
@@ -665,7 +665,7 @@ void drawgamescreen(void)
 	glPushMatrix();
 	glRotatef(radtodeg(pitch), 1, 0, 0);
 	glRotatef(radtodeg(theta), 0, 1, 0);
-	glScalef(40, 0.66, 40);            
+	glScalef(40, 0.66, 40);
 	glTranslatef(-x, -0.7, -y);
     
 	// draw a rocket
@@ -674,18 +674,18 @@ void drawgamescreen(void)
 	{
 		Rocket &rocket = rockets[ctr];
 		glDisable(GL_TEXTURE_2D);
-		glEnable(GL_LIGHTING);	
+		glEnable(GL_LIGHTING);
 		glPushMatrix();
         
 		glTranslatef(rocket.x, rocket.y, rocket.z);
         
 		glScalef(1.0/40.0, 1.0/0.66, 1.0/40.0);
-		glRotatef(-radtodeg(rocket.yaw), 0, 1, 0);			
+		glRotatef(-radtodeg(rocket.yaw), 0, 1, 0);
 		glRotatef(-radtodeg(rocket.pitch), 1, 0, 0);
 		if (rocket.playerrocket)
 			rocketmesh.draw();
-		else 
-			enemyrocketmesh.draw();			
+		else
+			enemyrocketmesh.draw();
 		glPopMatrix();
 		glDisable(GL_LIGHTING);
 		glEnable(GL_TEXTURE_2D);
@@ -694,15 +694,15 @@ void drawgamescreen(void)
     
 	// draw the explosions
 	glDisable(GL_TEXTURE_2D);
-	glEnable(GL_LIGHTING);	
+	glEnable(GL_LIGHTING);
     
 	for (int ctr = 0; ctr < explosions.size(); ctr++)
 	{
 		Explosion &explosion = explosions[ctr];
 		glPushMatrix();
 		glTranslatef(explosion.x, explosion.y, explosion.z);
-		glScalef(1.0/40.0, 1.0/0.66, 1.0/40.0);			
-		if (explosion.robotexploding) robotexplosionmesh.draw();			
+		glScalef(1.0/40.0, 1.0/0.66, 1.0/40.0);
+		if (explosion.robotexploding) robotexplosionmesh.draw();
 		else explosionmesh.draw();
 		glPopMatrix();
 	}
@@ -721,7 +721,7 @@ void drawgamescreen(void)
         
 		// don't draw robots out of field of view
         
-		float yawangle = atan2(-cos(theta), sin(theta));	 
+		float yawangle = atan2(-cos(theta), sin(theta));
 		float robotangle = atan2(robot2.z - y, robot2.x - x);
 		float anglediff = fabs(yawangle - robotangle);
         
@@ -729,11 +729,11 @@ void drawgamescreen(void)
 		if (anglediff > M_PI/4.0) continue;
         
 		glDisable(GL_TEXTURE_2D);
-		glEnable(GL_LIGHTING);	
+		glEnable(GL_LIGHTING);
         
 		glPushMatrix();
 		glTranslatef(robot2.x, robot2.y, robot2.z);
-		glScalef(1.0/40.0, 1.0/0.66, 1.0/40.0);	
+		glScalef(1.0/40.0, 1.0/0.66, 1.0/40.0);
         
 		glRotatef(-radtodeg(robot2.curangle), 0, 1, 0);
 		if (!robot2.alive) glRotatef(90, 0, 0, 1);
@@ -755,26 +755,26 @@ void drawgamescreen(void)
     // bricklight();
     
     
-	glBindTexture(GL_TEXTURE_2D, mytexture);          
-	glColor3f(1, 1, 1);  
+	glBindTexture(GL_TEXTURE_2D, mytexture);
+	glColor3f(1, 1, 1);
     
     // walls
 	glBegin(GL_QUADS);
 	while (i2 != theMikePoints.end())
-	{                                
-		MikePoint &p = *i2; 
+	{
+		MikePoint &p = *i2;
 		if (p.seg.x0 == p.seg.x1) glColor3f(.6, .6, .6);
 		else glColor3f(.9, .9, .9);
         
         
-                 	glColor3b(22, 49, 127  );
+        glColor3b(22, 49, 127  );
         
         glColor3ub(22, 49, 165);
-       
+        
         
         if (p.seg.x0 == p.seg.x1) glColor3ub(22, 149, 195);
 		else glColor3ub(22, 149, 245);
-         glColor3ub(255,255,255);
+        glColor3ub(255,255,255);
         //float ny = p.seg.x0 - p.seg.x1;
         //float nx = -(p.seg.y0 - p.seg.y1);
         float nx=1;
@@ -786,8 +786,10 @@ void drawgamescreen(void)
         
         float length = sqrt(dx*dx + dy*dy);
         
+        //printf("length: %f\n", length);
         
         length*=100.0f;
+        length = 1.0;
         
         if (p.seg.x0 == p.seg.x1) {nx=0;ny=1;}
         else {nx=1;ny=0;}
@@ -797,19 +799,19 @@ void drawgamescreen(void)
 		glVertex3f(p.seg.x0, 0, p.seg.y0);
 		glTexCoord2f(1*length, 0);
         glNormal3f(nx, 0, ny);
-		glVertex3f(p.seg.x1, 0, p.seg.y1); 
+		glVertex3f(p.seg.x1, 0, p.seg.y1);
 		glTexCoord2f(1*length, 1);
         glNormal3f(nx, 0, ny);
-		glVertex3f(p.seg.x1, 1, p.seg.y1); 
+		glVertex3f(p.seg.x1, 1, p.seg.y1);
 		glTexCoord2f(0, 1);
-                glNormal3f(nx, 0, ny);
+        glNormal3f(nx, 0, ny);
 		glVertex3f(p.seg.x0, 1
                    
                    
                    , p.seg.y0);
-		++i2;     
+		++i2;
 	}
-	glEnd();  
+	glEnd();
     
 	glDisable(GL_CULL_FACE);
     
@@ -821,8 +823,8 @@ void drawgamescreen(void)
     
 	//floor
 	//glColor3f(.6, .6, 1);
-
-     	glColor3ub(111, 111, 111   );
+    
+    glColor3ub(111, 111, 111   );
     
 	glBegin(GL_QUADS);
 	glTexCoord2f(0, 0);
@@ -837,14 +839,14 @@ void drawgamescreen(void)
 	glTexCoord2f(60, 0);
     glNormal3f(0, 1, 0);
 	glVertex3f(1, 0, 0);
-	glEnd();          
+	glEnd();
     
 	// ceiling
     
 	//glColor3f(1, .5, .5);
     
     
-    	glColor3ub(55, 55, 55   );
+    glColor3ub(55, 55, 55   );
     
 	glBegin(GL_QUADS);
 	glTexCoord2f(0, 0);
@@ -859,7 +861,7 @@ void drawgamescreen(void)
 	glTexCoord2f(60, 0);
     glNormal3f(0, -1, 0);
 	glVertex3f(1, 1, 0);
-	glEnd();          
+	glEnd();
 	glPopMatrix();
     
     
@@ -868,7 +870,7 @@ void drawgamescreen(void)
 	// rocket launcher
 	glDisable(GL_DEPTH_TEST);
 	glDisable(GL_TEXTURE_2D);
-	glEnable(GL_LIGHTING);		
+	glEnable(GL_LIGHTING);
 	glPushMatrix();
 	glTranslatef(.4, -.4, -1);
 	launcher.draw();
@@ -894,7 +896,7 @@ void drawgamescreen(void)
 		glVertex3f(1, -1, -1);
 		glVertex3f(1, 1, -1);
 		glVertex3f(-1, 1, -1);
-		glEnd();          
+		glEnd();
 		glDisable(GL_BLEND);
 		glDepthMask(GL_TRUE);
         
@@ -931,48 +933,48 @@ void drawgamemenu(void)
     
     //light3();
     
-    glDisable(GL_DEPTH_TEST);            
+    glDisable(GL_DEPTH_TEST);
 	glPushMatrix ();
-	glTranslatef(0, .25, -8);            
-	glTranslatef(-1.1, 0, 0);            
-	glColor3f(0.4, .8, 1);  
-	float fontwid;  
+	glTranslatef(0, .25, -8);
+	glTranslatef(-1.1, 0, 0);
+	glColor3f(0.4, .8, 1);
+	float fontwid;
 	glPushMatrix();
 	fontwid = nf->getwidth("Play", .05);
 	nf->drawstring("Play", .05);
-	glPopMatrix(); 	  	  	  
-	glTranslatef(0, -1, 0);            
+	glPopMatrix();
+	glTranslatef(0, -1, 0);
 	glPushMatrix();
 	fontwid = nf->getwidth("Instructions", .05);
 	nf->drawstring("Instructions", .05);
 	glPopMatrix();
-	glTranslatef(0, -1, 0);            
+	glTranslatef(0, -1, 0);
 	glPushMatrix();
 	fontwid = nf->getwidth("Exit", .05);
 	nf->drawstring("Exit", .05);
 	glPopMatrix();
-	glTranslatef(0, 3.5, 4);            
+	glTranslatef(0, 3.5, 4);
 	glColor3f(0.9, .5, 0.3);
-	glTranslatef(1.1, 0, 0);            
+	glTranslatef(1.1, 0, 0);
 	glPushMatrix();
-	glTranslatef(0, 0, -1.0);      
+	glTranslatef(0, 0, -1.0);
     light5();
 	centertext("Rockets and Robots");
 	glPopMatrix();
-	glPopMatrix ();	    
-	glPushMatrix ();	    
+	glPopMatrix ();
+	glPushMatrix ();
     
 	if (menusel == PLAY) glTranslatef(-.6, 0.095, -2.5);
 	else if (menusel == INFO) glTranslatef(-.6, -0.235, -2.5);
 	else if (menusel == EXITGAME) glTranslatef(-.6, -0.525, -2.5);
-	glEnable(GL_DEPTH_TEST);   
+	glEnable(GL_DEPTH_TEST);
 	glDepthMask(GL_TRUE);
-	glDisable(GL_BLEND); 
+	glDisable(GL_BLEND);
 	glEnable(GL_LIGHTING);
 	glRotatef(sin(menuselrotatetime)*60-30, 0, 1, 0);
     light5();
 	robotredmesh.draw();
-	glPopMatrix ();	       	     
+	glPopMatrix ();
 }
 
 
@@ -985,12 +987,12 @@ void light3(void)
     GLfloat LightGlobal[]= { .105, .205, .205, 1.0f };
     
     GLfloat LightPosition[]= { 0.0f,3.25f, -6.0f, 1.0f };
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);	
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);	
+    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
     glEnable(GL_LIGHT1);
     
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal); 
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal);
     
 }
 
@@ -1004,12 +1006,12 @@ void light4(void)
     GLfloat LightGlobal[]= { .105, .205, .205, 1.0f };
     
     GLfloat LightPosition[]= { 0.0f,-3.25f, -6.0f, 1.0f };
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);	
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);	
+    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
     glEnable(GL_LIGHT1);
     
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal); 
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal);
     
 }
 
@@ -1023,12 +1025,12 @@ void light5(void)
     GLfloat LightGlobal[]= { .105, .205, .205, 1.0f };
     
     GLfloat LightPosition[]= { 0.0f,0.0f, 1.0f, 1.0f };
-    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);	
-    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);	
+    glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);
     glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
     glEnable(GL_LIGHT1);
     
-    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal); 
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, LightGlobal);
     
 }
 
@@ -1059,57 +1061,57 @@ void drawinstructions(void)
 	//glDisable(GL_LIGHTING);
     glEnable(GL_COLOR_MATERIAL);
     
-    glShadeModel( GL_SMOOTH ); 
+    glShadeModel( GL_SMOOTH );
     
-	glDisable(GL_DEPTH_TEST);            
+	glDisable(GL_DEPTH_TEST);
 	glPushMatrix ();
-	glTranslatef(0, 3.25, -7);            
-	glColor3f(0.4, .8, 1);  
+	glTranslatef(0, 3.25, -7);
+	glColor3f(0.4, .8, 1);
 	centertext("Instructions");
     
     light4();
 	glColor3f(1, 1, 1);
-	glTranslatef(0, 0, -7);            
+	glTranslatef(0, 0, -7);
 	centertext("Your mission: kill all robots");
-	glTranslatef(0, -1.25, 0); 
-	centertext("Arrow keys to move");	  
-	glTranslatef(0, -1.25, 0);            
+	glTranslatef(0, -1.25, 0);
+	centertext("Arrow keys to move");
+	glTranslatef(0, -1.25, 0);
 	centertext("A and S to go side to side");
-	glTranslatef(0, -1.25, 0);            
+	glTranslatef(0, -1.25, 0);
 	centertext("Z to fire rocket");
-	glTranslatef(0, -1.25, 0);            
+	glTranslatef(0, -1.25, 0);
 	centertext("P to pause or unpause");
-	glTranslatef(0, -1.25, 0);            
-	//centertext("M for mouse config");	
-	glColor3f(0.4, .8, 1);  
-	glTranslatef(0, -1.25, 0);  
+	glTranslatef(0, -1.25, 0);
+	//centertext("M for mouse config");
+	glColor3f(0.4, .8, 1);
+	glTranslatef(0, -1.25, 0);
     light5();
-	centertext("Press Enter to return to main menu");     
+	centertext("Press Enter to return to main menu");
 	glPopMatrix ();
 	glEnable(GL_LIGHTING);
-	glEnable(GL_DEPTH_TEST);                 
+	glEnable(GL_DEPTH_TEST);
 }
 
 void drawyoulose(void)
 {
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
-	glDisable(GL_DEPTH_TEST); 
+	glDisable(GL_DEPTH_TEST);
 	glDepthMask(GL_FALSE);
-	glPushMatrix ();  
-	glTranslatef(0, .5, -3);            	  
+	glPushMatrix ();
+	glTranslatef(0, .5, -3);
 	glColor3f(1, 1, 1);
 	float fontwid = nf->getwidth("Game over", .05);
-	glTranslatef(-fontwid/2.0, 0, 0);                    
+	glTranslatef(-fontwid/2.0, 0, 0);
 	nf->drawstring("Game over", .05);
-	glPopMatrix ();	    	  	  	  
+	glPopMatrix ();
 	glPushMatrix ();
-	glTranslatef(0, -1, -9);      
-	centertext("Press Enter to return to main menu");     
-	glPopMatrix ();	  	  	  	  
-	glEnable(GL_DEPTH_TEST);            
-	glDisable(GL_BLEND);   
-	glEnable(GL_LIGHTING);    
+	glTranslatef(0, -1, -9);
+	centertext("Press Enter to return to main menu");
+	glPopMatrix ();
+	glEnable(GL_DEPTH_TEST);
+	glDisable(GL_BLEND);
+	glEnable(GL_LIGHTING);
 	glDepthMask(GL_TRUE);
 }
 
@@ -1118,20 +1120,20 @@ void drawyouwin(void)
 	glDepthMask(GL_FALSE);
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
-	glDisable(GL_DEPTH_TEST);            
-	glPushMatrix ();	  
-	glTranslatef(0, .5, -3);            
-	glColor3f(1, 1, 1);
-	centertext("You win!");     
-	glPopMatrix ();	    	  	  
+	glDisable(GL_DEPTH_TEST);
 	glPushMatrix ();
-	glTranslatef(0, -1, -9);      
-	centertext("Press Enter to return to main menu");     
-	glPopMatrix ();	  	  	  	  
-	glEnable(GL_DEPTH_TEST);            
+	glTranslatef(0, .5, -3);
+	glColor3f(1, 1, 1);
+	centertext("You win!");
+	glPopMatrix ();
+	glPushMatrix ();
+	glTranslatef(0, -1, -9);
+	centertext("Press Enter to return to main menu");
+	glPopMatrix ();
+	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_BLEND);
-	glDisable(GL_POLYGON_SMOOTH);	    
-	glEnable(GL_LIGHTING);  
+	glDisable(GL_POLYGON_SMOOTH);
+	glEnable(GL_LIGHTING);
 	glDepthMask(GL_TRUE);
 }
 
@@ -1140,64 +1142,64 @@ void drawpausedscreen(void)
 	glDepthMask(GL_FALSE);
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_LIGHTING);
-	glDisable(GL_DEPTH_TEST);            
+	glDisable(GL_DEPTH_TEST);
 	glPushMatrix ();
-	glTranslatef(-1.20, .25, -2);            
+	glTranslatef(-1.20, .25, -2);
 	glColor3f(1, 1, 1);
 	nf->drawstring("Paused", .05);
-	glPopMatrix ();	    
-	glEnable(GL_DEPTH_TEST);            
+	glPopMatrix ();
+	glEnable(GL_DEPTH_TEST);
 	glDisable(GL_BLEND);
-	glEnable(GL_LIGHTING); 
+	glEnable(GL_LIGHTING);
 	glDepthMask(GL_TRUE);
 }
 
 
 
-//BOOL CALLBACK ScreenModeProc(HWND hwndDlg, 
-//							 UINT message, 
-//							 WPARAM wParam, 
-//							 LPARAM lParam) 
-//{ 
-//	switch (message) 
-//	{ 
-//	case WM_COMMAND: 
-//		switch (LOWORD(wParam)) 
-//		{ 
+//BOOL CALLBACK ScreenModeProc(HWND hwndDlg,
+//							 UINT message,
+//							 WPARAM wParam,
+//							 LPARAM lParam)
+//{
+//	switch (message)
+//	{
+//	case WM_COMMAND:
+//		switch (LOWORD(wParam))
+//		{
 //		case 101:
-//			EndDialog(hwndDlg, 1); 
-//			return TRUE; 
+//			EndDialog(hwndDlg, 1);
+//			return TRUE;
 //
 //		case 102:
-//			EndDialog(hwndDlg, 2); 
-//			return TRUE; 
+//			EndDialog(hwndDlg, 2);
+//			return TRUE;
 //
 //		case 103:
-//			EndDialog(hwndDlg, 3); 
-//			return TRUE; 
+//			EndDialog(hwndDlg, 3);
+//			return TRUE;
 //
 //		case 104:
-//			EndDialog(hwndDlg, 4); 
-//			return TRUE; 
+//			EndDialog(hwndDlg, 4);
+//			return TRUE;
 //
-//		case IDCANCEL: 
-//			EndDialog(hwndDlg, 10); 
+//		case IDCANCEL:
+//			EndDialog(hwndDlg, 10);
 //			ExitProcess(0);
-//			return TRUE; 
-//		} 
-//	} 
-//	return FALSE; 
-//} 
+//			return TRUE;
+//		}
+//	}
+//	return FALSE;
+//}
 
 
 
-//BOOL CALLBACK MouseSensitivityProc(HWND hwndDlg, 
-//								   UINT message, 
-//								   WPARAM wParam, 
-//								   LPARAM lParam) 
-//{ 
-//	switch (message) 
-//	{ 
+//BOOL CALLBACK MouseSensitivityProc(HWND hwndDlg,
+//								   UINT message,
+//								   WPARAM wParam,
+//								   LPARAM lParam)
+//{
+//	switch (message)
+//	{
 //	case WM_INITDIALOG:
 //		{
 //			HWND sliderhwnd = GetDlgItem(hwndDlg, 203);
@@ -1218,40 +1220,40 @@ void drawpausedscreen(void)
 //				);
 //
 //			SendMessage((HWND) sliderhwnd,
-//				(UINT) TBM_SETPOS,  
-//				(WPARAM) TRUE,  
-//				(LPARAM) mousesensitivity     
-//				);  
+//				(UINT) TBM_SETPOS,
+//				(WPARAM) TRUE,
+//				(LPARAM) mousesensitivity
+//				);
 //
 //			return TRUE;
 //		}
 //
-//	case WM_COMMAND: 
-//		switch (LOWORD(wParam)) 
-//		{ 
-//		case IDOK: 
+//	case WM_COMMAND:
+//		switch (LOWORD(wParam))
+//		{
+//		case IDOK:
 //
 //		case 207:
 //			{
 //				HWND sliderhwnd = GetDlgItem(hwndDlg, 203);
 //
-//				mousesensitivity = SendMessage((HWND) sliderhwnd, 
+//				mousesensitivity = SendMessage((HWND) sliderhwnd,
 //					(UINT) TBM_GETPOS,
-//					0, 0);  
+//					0, 0);
 //
 //				EndDialog(hwndDlg, 10);
 //
 //			}
 //
-//			return TRUE; 
+//			return TRUE;
 //
 //		case 210:
-//			EndDialog(hwndDlg, 2); 
-//			return TRUE; 
-//		} 
-//	} 
-//	return FALSE; 
-//} 
+//			EndDialog(hwndDlg, 2);
+//			return TRUE;
+//		}
+//	}
+//	return FALSE;
+//}
 
 
 
@@ -1260,7 +1262,7 @@ void drawpausedscreen(void)
 //	WNDCLASS wc;
 //	HWND hWnd;
 //	HDC hDC;
-//	HGLRC hRC;        
+//	HGLRC hRC;
 //	MSG msg;
 //	BOOL bQuit = FALSE;
 //
@@ -1301,7 +1303,7 @@ void drawpausedscreen(void)
 //
 //	/* create main window */
 //	hWnd = CreateWindow (
-//		"GLSample", "Rockets and Robots", 
+//		"GLSample", "Rockets and Robots",
 //		WS_POPUPWINDOW ,
 //		0, 0, winwidth, winheight,
 //		NULL, NULL, hInstance, NULL);
@@ -1310,7 +1312,7 @@ void drawpausedscreen(void)
 //	g_pSoundManager = new CSoundManager();
 //	if (g_pSoundManager == NULL) fatalerror("could not initialize Sound Manager");
 //
-//	HRESULT hr = g_pSoundManager->Initialize( hWnd, DSSCL_PRIORITY );    
+//	HRESULT hr = g_pSoundManager->Initialize( hWnd, DSSCL_PRIORITY );
 //	if (FAILED(hr)) fatalerror("call to g_pSoundManager->Initialize failed");
 //
 //
@@ -1329,17 +1331,17 @@ void drawpausedscreen(void)
 //
 //	EnableOpenGL (hWnd, &hDC, &hRC);
 //
-//	nf = new Newfont("myfont.obj", "myfont.mtl", 1); 
+//	nf = new Newfont("myfont.obj", "myfont.mtl", 1);
 //
-//	timeSetEvent(15, 0, cbFunct, NULL, TIME_PERIODIC);                   
+//	timeSetEvent(15, 0, cbFunct, NULL, TIME_PERIODIC);
 //
 //	GLfloat LightAmbient[]= { .1, .1, .1, 1.0f };
 //	GLfloat LightDiffuse[]= { .04, .04, .04, 1.0f };
 //	GLfloat LightGlobal[]= { .5, .5, .5, 1.0f };
 //
 //	GLfloat LightPosition[]= { 0.0f, 0.0f, -100.0f, 1.0f };
-//	glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);	
-//	glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);	
+//	glLightfv(GL_LIGHT1, GL_AMBIENT, LightAmbient);
+//	glLightfv(GL_LIGHT1, GL_DIFFUSE, LightDiffuse);
 //	glLightfv(GL_LIGHT1, GL_POSITION,LightPosition);
 //	glEnable(GL_LIGHT1);
 //
@@ -1356,10 +1358,10 @@ void drawpausedscreen(void)
 //	vector<MikePoint> MikePoints;
 //
 //	vector<Segment>::iterator i = segments.begin();
-//	while (i != segments.end()) 
+//	while (i != segments.end())
 //	{
 //		Segment &seg = *i;
-//		MikePoint p((seg.x0+seg.x1)/2.0, (seg.y0+seg.y1)/2.0, seg); 
+//		MikePoint p((seg.x0+seg.x1)/2.0, (seg.y0+seg.y1)/2.0, seg);
 //		MikePoints.push_back(p);
 //		++i;
 //	}
@@ -1405,20 +1407,20 @@ void drawpausedscreen(void)
 //
 //			if (gamestate == GAMEMENU) {drawgamemenu(); Sleep(20);}
 //			else if (gamestate == ACTION) drawgamescreen();
-//			else if (gamestate == PAUSED) 
+//			else if (gamestate == PAUSED)
 //			{
 //				drawgamescreen();
 //				drawpausedscreen();
 //			}
 //			else if (gamestate == INSTRUCTIONS) drawinstructions();
-//			else if (gamestate == YOULOSE) 
+//			else if (gamestate == YOULOSE)
 //			{
-//				drawgamescreen();     
+//				drawgamescreen();
 //				drawyoulose();
 //			}
-//			else if (gamestate == YOUWIN) 
+//			else if (gamestate == YOUWIN)
 //			{
-//				drawgamescreen();     
+//				drawgamescreen();
 //				drawyouwin();
 //			}
 //
@@ -1428,7 +1430,7 @@ void drawpausedscreen(void)
 //			if (gamestate == ACTION)
 //			{
 //				// take care of the physics
-//				while (physicsactual < physicsgoal) {physicsloop(); 
+//				while (physicsactual < physicsgoal) {physicsloop();
 //				physicsactual++;}
 //
 //				if (health == 0) gamestate = YOULOSE;
@@ -1459,7 +1461,7 @@ void drawpausedscreen(void)
 //	delete g_pSoundManager;
 //
 //	// free up the font
-//	delete nf; 
+//	delete nf;
 //
 //	// free up kdtree
 //	delete kdtree;
@@ -1504,7 +1506,7 @@ void drawpausedscreen(void)
 //				ShowCursor(TRUE);
 //				DialogBox( GetModuleHandle(NULL), MAKEINTRESOURCE(200), hWnd, MouseSensitivityProc);
 //				ShowCursor(FALSE);
-//				gamestate = oldgamestate;	
+//				gamestate = oldgamestate;
 //				themouse->acquire();
 //				return 0;
 //			}
@@ -1513,24 +1515,24 @@ void drawpausedscreen(void)
 //			if (menusel == PLAY) menusel = EXITGAME;
 //			else if (menusel == INFO) menusel = PLAY;
 //			else if (menusel == EXITGAME) menusel = INFO;
-//			return 0;             
+//			return 0;
 //
 //		case VK_DOWN:
 //			if (gamestate != GAMEMENU) return 0;
 //			if (menusel == PLAY) menusel = INFO;
 //			else if (menusel == INFO) menusel = EXITGAME;
 //			else if (menusel == EXITGAME) menusel = PLAY;
-//			return 0;  
+//			return 0;
 //
 //		case VK_RETURN:
 //
 //			if (gamestate == INSTRUCTIONS) {gamestate = GAMEMENU; return 0;}
 //			if (gamestate == YOULOSE || gamestate == YOUWIN) {reseteverything(); return 0;}
 //			if (gamestate != GAMEMENU) return 0;
-//			if (menusel == PLAY) {themouse->acquire(); gamestate = ACTION;}             
+//			if (menusel == PLAY) {themouse->acquire(); gamestate = ACTION;}
 //			if (menusel == INFO) gamestate = INSTRUCTIONS;
-//			if (menusel == EXITGAME) PostQuitMessage (0);             
-//			return 0;  
+//			if (menusel == EXITGAME) PostQuitMessage (0);
+//			return 0;
 //		}
 //		return 0;
 //
@@ -1557,7 +1559,7 @@ void drawpausedscreen(void)
 //	ZeroMemory (&pfd, sizeof (pfd));
 //	pfd.nSize = sizeof (pfd);
 //	pfd.nVersion = 1;
-//	pfd.dwFlags = PFD_DRAW_TO_WINDOW | 
+//	pfd.dwFlags = PFD_DRAW_TO_WINDOW |
 //		PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER;
 //	pfd.iPixelType = PFD_TYPE_RGBA;
 //	pfd.cColorBits = 24;

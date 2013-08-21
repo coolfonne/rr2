@@ -463,8 +463,15 @@ void loadGLTextures()
                  [ [ NSBundle mainBundle ] resourcePath ],
                  "newrock2.gif" ],
                0
-               
+    
                );
+    
+//    loadBitmap( [NSString stringWithFormat:@"%@/%s",
+//                 [ [ NSBundle mainBundle ] resourcePath ],
+//                 "graymud.jpg" ],
+//               0
+//               
+//               );
     
     
     
