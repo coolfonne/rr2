@@ -12,7 +12,7 @@ public:
         
         NSURL *sound_URL   = [[NSBundle mainBundle] URLForResource: filename
                                                      withExtension: @"wav"];
-        AudioServicesCreateSystemSoundID((CFURLRef)sound_URL, &sound_id);  
+        AudioServicesCreateSystemSoundID((CFURLRef)sound_URL, &sound_id);
         
 	}
     
@@ -23,7 +23,7 @@ public:
     
 	void freememory(void)
 	{
-        AudioServicesDisposeSystemSoundID(sound_id); 
+        AudioServicesDisposeSystemSoundID(sound_id);
 	}
     
 };

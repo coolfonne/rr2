@@ -539,6 +539,17 @@ void mouse(int button, int state, int x, int y) {
 int main(int argc, char *argv[])
 {
     
+    explodesound.loadsound(@"rocketexplosion3");
+    screamsound.loadsound(@"diescream");
+    rlaunchsound.loadsound(@"rlaunch2");
+    robotexplodesound.loadsound(@"robotexplosion2");
+    robotlaunchsound.loadsound(@"robotlaunch6");
+    robotrocketexplodesound.loadsound(@"robotrocketexplosion");
+    
+    
+    
+    
+    
 //    TheMouse *themouse = TheMouse::getInstance();
 //    
 //    
@@ -595,12 +606,7 @@ int main(int argc, char *argv[])
     
     
     
-    explodesound.loadsound(@"rocketexplosion3");
-    screamsound.loadsound(@"diescream");
-    rlaunchsound.loadsound(@"rlaunch2");
-    robotexplodesound.loadsound(@"robotexplosion2");
-    robotlaunchsound.loadsound(@"robotlaunch6");
-    robotrocketexplodesound.loadsound(@"robotrocketexplosion");
+
     
     
     
