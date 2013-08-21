@@ -176,39 +176,6 @@ void specialdown(int key, int x, int y)
     if (key==GLUT_KEY_RIGHT) rightkeydown=1;
     if (key==GLUT_KEY_LEFT) leftkeydown=1;  
     
-    
-    
-    
-    //    
-    //    
-    //    if (key==GLUT_KEY_UP)
-    //    {
-    //        if (gamestate != GAMEMENU) return 0;
-    //        if (menusel == PLAY) menusel = EXITGAME;
-    //        else if (menusel == INFO) menusel = PLAY;
-    //        else if (menusel == EXITGAME) menusel = INFO;
-    //        return 0;    
-    //        
-    //    }
-    //    
-    //    
-    //    if (key==GLUT_KEY_DOWN)
-    //    {
-    //        if (gamestate != GAMEMENU) return 0;
-    //        if (menusel == PLAY) menusel = INFO;
-    //        else if (menusel == INFO) menusel = EXITGAME;
-    //        else if (menusel == EXITGAME) menusel = PLAY;
-    //        return 0; 
-    //        
-    //    }
-    //    
-    //    
-    //    
-    //    
-    //    
-    
-    
-    
 }
 
 void light2(void)
