@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */ = {isa = PBXBuildFile; fileRef = BA12B51B1672C7E0008929CC /* newrock2.gif */; };
 		BA2061D11597FED500FBADED /* robotz.icns in Resources */ = {isa = PBXBuildFile; fileRef = BA2061D01597FED500FBADED /* robotz.icns */; };
+		BA42864817C49E1800D90C2A /* icon_512x512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BA42864717C49E1800D90C2A /* icon_512x512@2x.png */; };
 		BA560A0D17C4086D00377EDA /* graymud.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA560A0C17C4086D00377EDA /* graymud.jpg */; };
 		BA624B6F17C33E6E00EBE791 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E190400E14D2638700EE91CE /* AppKit.framework */; };
 		BA92B85117C2F077008DFA72 /* TheMouse.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA92B84F17C2F077008DFA72 /* TheMouse.cpp */; };
@@ -59,6 +60,7 @@
 		BA12B51B1672C7E0008929CC /* newrock2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = newrock2.gif; sourceTree = "<group>"; };
 		BA2061D01597FED500FBADED /* robotz.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = robotz.icns; sourceTree = "<group>"; };
 		BA3A16BE15B30C9900C89385 /* Rockets and Robots.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Rockets and Robots.entitlements"; sourceTree = "<group>"; };
+		BA42864717C49E1800D90C2A /* icon_512x512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_512x512@2x.png"; sourceTree = "<group>"; };
 		BA560A0C17C4086D00377EDA /* graymud.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = graymud.jpg; sourceTree = "<group>"; };
 		BA92B84F17C2F077008DFA72 /* TheMouse.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheMouse.cpp; sourceTree = "<group>"; };
 		BA92B85017C2F077008DFA72 /* TheMouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheMouse.h; sourceTree = "<group>"; };
@@ -136,9 +138,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA42864617C49C5100D90C2A /* whatever.iconset */ = {
+			isa = PBXGroup;
+			children = (
+				BA42864717C49E1800D90C2A /* icon_512x512@2x.png */,
+			);
+			name = whatever.iconset;
+			sourceTree = "<group>";
+		};
 		E1903FFC14D2638700EE91CE = {
 			isa = PBXGroup;
 			children = (
+				BA42864617C49C5100D90C2A /* whatever.iconset */,
 				BA3A16BE15B30C9900C89385 /* Rockets and Robots.entitlements */,
 				E19E27A414D9FCD2002B8B60 /* Resources */,
 				E190402A14D263E800EE91CE /* rr_pc */,
@@ -347,6 +358,7 @@
 				BA2061D11597FED500FBADED /* robotz.icns in Resources */,
 				BA12B51C1672C7E0008929CC /* newrock2.gif in Resources */,
 				BA560A0D17C4086D00377EDA /* graymud.jpg in Resources */,
+				BA42864817C49E1800D90C2A /* icon_512x512@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,11 +459,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Rockets and Robots.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: michael carson (45EEXY5X28)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rr/Rockets and Robots-Prefix.pch";
 				INFOPLIST_FILE = "rr/Rockets and Robots-Info.plist";
 				PRODUCT_NAME = "Rockets and Robots";
+				PROVISIONING_PROFILE = "A182A028-0954-4EAC-8082-7ACBCA57EDF1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -461,11 +474,12 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = "Rockets and Robots.entitlements";
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: michael carson (45EEXY5X28)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "rr/Rockets and Robots-Prefix.pch";
 				INFOPLIST_FILE = "rr/Rockets and Robots-Info.plist";
 				PRODUCT_NAME = "Rockets and Robots";
+				PROVISIONING_PROFILE = "A182A028-0954-4EAC-8082-7ACBCA57EDF1";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
