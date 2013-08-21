@@ -386,13 +386,7 @@ void loadGLTextures()
 {
 	
     
-    
-   /* loadBitmap( [NSString stringWithFormat:@"%@/%s",
-                 [ [ NSBundle mainBundle ] resourcePath ],
-                 "rockblur.jpg" ],
-               0
-               
-               );*/
+
     
     
   /*  loadBitmap( [NSString stringWithFormat:@"%@/%s",
